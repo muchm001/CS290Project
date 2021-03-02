@@ -11,7 +11,7 @@ app.engine('hbs', hbs({
     extname: 'hbs',
     defaultLayout: 'index',
     partialsDir: __dirname + '/views/partials/',
-    }));
+}));
 
 //Sets our app to use the handlebars engine
 app.set('view engine', 'hbs');
