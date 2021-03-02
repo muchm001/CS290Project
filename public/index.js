@@ -3,7 +3,7 @@ const hbs = require('express-handlebars');
 const path = require("path");
 
 const app = express();
-const port = 3000;
+const port = 55420;
 
 //Sets handlebars configurations
 app.engine('hbs', hbs({
