@@ -5,7 +5,7 @@ const path = require("path");
 const app = express();
 const port = 12560;
 
-//Sets handlebars configurations
+
 app.engine('hbs', hbs({
     layoutsDir: __dirname + '/views/layouts',
     extname: 'hbs',
@@ -13,7 +13,6 @@ app.engine('hbs', hbs({
     partialsDir: __dirname + '/views/partials/',
 }));
 
-//Sets our app to use the handlebars engine
 app.set('view engine', 'hbs');
 
 
@@ -22,22 +21,18 @@ app.use(express.static('public'));
 
 
 app.get('/', (req, res) => {
-    //Using the index.hbs file instead of planB
     res.render('main', {layout: 'index'});
 });
 
 app.get('/thinkers', (req, res) => {
-    //Using the index.hbs file instead of planB
     res.render('thinkers', {layout: 'index'});
 });
 
 app.get('/philosophy', (req, res) => {
-    //Using the index.hbs file instead of planB
     res.render('philosophy', {layout: 'index'});
 });
 
 app.get('/orgs', (req, res) => {
-    //Using the index.hbs file instead of planB
     res.render('orgs', {layout: 'index'});
 });
 
